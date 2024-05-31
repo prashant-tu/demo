@@ -34,7 +34,7 @@ test("Create POST api request using dynamic request body in playwright", async (
   console.log(await postAPIResponse.json());
 
   expect(postAPIResponse.ok()).toBeTruthy();
-  expect(postAPIResponse.status()).toBe(200);
+  expect(postAPIResponse.status()).toBe(201);
 
   // validate api response json obj
   const postAPIResponseBody = await postAPIResponse.json();

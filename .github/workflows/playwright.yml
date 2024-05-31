@@ -42,6 +42,6 @@ jobs:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           subject: GitHub Actions Workflow Failed
-          to: legalsalah.test@gmail.com
-          from: prashant.singh@testunity.com
+          to: prashant.singh@testunity.com
+          from: legalsalah.test@gmail.com
           body: The GitHub Actions workflow for Playwright tests has failed. Please check the workflow logs for more details.
