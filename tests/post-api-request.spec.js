@@ -33,7 +33,7 @@ test("Create POST api request using JSON file in playwright", async ({
         "2018-01-01"
     );
     expect(postAPIResponseBody.booking.bookingdates).toHaveProperty(
-        "checkout",
+        "checkout_error",
         "2019-01-01"
     );
 });
