@@ -8,7 +8,7 @@ test.describe.serial('API tests', () => {
     // create post api request using playwright
     const postAPIResponse = await request.post("/booking", {
       data: {
-        firstname: "API",
+        firstname: "API_Renamed",
         lastname: "Testing",
         totalprice: 1000,
         depositpaid: true,
