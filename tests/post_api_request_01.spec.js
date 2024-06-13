@@ -4,7 +4,7 @@ test.describe.serial('API tests', () => {
   let b_id;
   let tokenNo;
 
-  test.only('Creating a Booking using POST api request', async ({ request }) => {
+  test('Creating a Booking using POST api request', async ({ request }) => {
     // create post api request using playwright
     const postAPIResponse = await request.post("/booking", {
       data: {
@@ -50,7 +50,7 @@ test.describe.serial('API tests', () => {
     );
   });
 
-  test.only('Get the booking details using GET api request', async ({ request }) => {
+  test('Get the booking details using GET api request', async ({ request }) => {
     // Ensure b_id is set before running this test
     if (!b_id) {
       throw new Error('Booking ID (b_id) is not set');
@@ -65,7 +65,7 @@ test.describe.serial('API tests', () => {
     expect(getAPIResponse.status()).toBe(200);
   });
 
-  test.only("Generate auth token & update booking details using PUT api request", async ({ request }) => {
+  test("Generate auth token & update booking details using PUT api request", async ({ request }) => {
 
     // generate token
     const tokenAPIResponse = await request.post("/auth", {
@@ -105,7 +105,7 @@ test.describe.serial('API tests', () => {
     expect(putAPIResponse.status()).toBe(200);
   });
 
-  test.only("Partially updating the booking details using PATCH api request", async ({ request }) => {
+  test("Partially updating the booking details using PATCH api request", async ({ request }) => {
 
     // partial update booking details
     const patchAPIResponse = await request.patch(`/booking/${b_id}`, {
@@ -124,7 +124,7 @@ test.describe.serial('API tests', () => {
     expect(patchAPIResponse.status()).toBe(200);
   });
 
-  test.only("Deleting the Booking using DELETE api request.", async ({ request }) => {
+  test("Deleting the Booking using DELETE api request.", async ({ request }) => {
 
     // DELETE api request
     const deleteAPIResponse = await request.delete(`/booking/${b_id}`, {
